@@ -57,52 +57,52 @@ new class extends Component
 
 <div class="space-y-4">
     @if ($submitted)
-        <div class="rounded-lg border border-emerald-300 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
+        <div class="rounded-lg border border-emerald-700 bg-emerald-950/60 px-4 py-3 text-sm text-emerald-300">
             Your message has been submitted.
         </div>
     @endif
 
     <form wire:submit="submit" class="space-y-4">
         <div class="space-y-1">
-            <label for="guestbook-name" class="text-sm font-medium text-zinc-900">Name</label>
+            <label for="guestbook-name" class="text-sm font-medium text-zinc-300">Name</label>
             <input
                 id="guestbook-name"
                 type="text"
                 wire:model.blur="name"
                 maxlength="120"
-                class="w-full rounded-md border-zinc-300 px-3 py-2 text-sm focus:border-zinc-600 focus:ring-zinc-600"
+                class="w-full rounded-md border border-zinc-600 bg-zinc-800/70 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-500 focus:border-zinc-400 focus:ring-zinc-400"
                 required
             >
-            @error('name') <p class="text-xs text-red-600">{{ $message }}</p> @enderror
+            @error('name') <p class="text-xs text-red-400">{{ $message }}</p> @enderror
         </div>
 
         <div class="space-y-1">
-            <label for="guestbook-email" class="text-sm font-medium text-zinc-900">Email (optional)</label>
+            <label for="guestbook-email" class="text-sm font-medium text-zinc-300">Email (optional)</label>
             <input
                 id="guestbook-email"
                 type="email"
                 wire:model.blur="email"
                 maxlength="255"
-                class="w-full rounded-md border-zinc-300 px-3 py-2 text-sm focus:border-zinc-600 focus:ring-zinc-600"
+                class="w-full rounded-md border border-zinc-600 bg-zinc-800/70 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-500 focus:border-zinc-400 focus:ring-zinc-400"
             >
-            @error('email') <p class="text-xs text-red-600">{{ $message }}</p> @enderror
+            @error('email') <p class="text-xs text-red-400">{{ $message }}</p> @enderror
         </div>
 
         <div class="space-y-1">
-            <label for="guestbook-message" class="text-sm font-medium text-zinc-900">Message</label>
+            <label for="guestbook-message" class="text-sm font-medium text-zinc-300">Message</label>
             <textarea
                 id="guestbook-message"
                 wire:model.blur="message"
                 rows="6"
                 maxlength="2000"
-                class="w-full rounded-md border-zinc-300 px-3 py-2 text-sm focus:border-zinc-600 focus:ring-zinc-600"
+                class="w-full rounded-md border border-zinc-600 bg-zinc-800/70 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-500 focus:border-zinc-400 focus:ring-zinc-400"
                 required
             ></textarea>
-            @error('message') <p class="text-xs text-red-600">{{ $message }}</p> @enderror
+            @error('message') <p class="text-xs text-red-400">{{ $message }}</p> @enderror
         </div>
 
         <div>
-            <button type="submit" class="inline-flex items-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700">
+            <button type="submit" class="inline-flex items-center rounded-md bg-zinc-700 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-600">
                 Submit
             </button>
         </div>
