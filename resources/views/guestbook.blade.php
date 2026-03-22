@@ -15,7 +15,7 @@
         <main class="mx-auto flex w-full max-w-3xl flex-col gap-6 p-6 md:p-10">
             <header class="flex items-center justify-between gap-3">
                 <h1 class="text-2xl font-semibold tracking-tight">Guestbook</h1>
-                <a href="{{ route('home') }}" class="text-sm text-zinc-600 underline underline-offset-4">Back home</a>
+                <a href="http://p4u1.com" class="text-sm text-zinc-600 underline underline-offset-4">Back home</a>
             </header>
 
             <section class="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm md:p-6">
